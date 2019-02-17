@@ -15,7 +15,7 @@
       </div>
     </section>
     <section slot="panel-body">
-      <form novalidate class="md-layout">
+      <form novalidate class="md-layout" @submit="handleSubmit">
         <md-card class="md-layout-item md-size-100 md-small-size-100">
           <md-card-content>
             <div class="md-layout md-gutter">
@@ -33,7 +33,7 @@
                   <md-input name="first-name" id="first-name"/>
                 </md-field>
                 <md-card-actions>
-                  <md-button type="button" class="md-primary">Create user</md-button>
+                  <md-button type="submit" class="md-primary">Create user</md-button>
                 </md-card-actions>
               </div>
             </div>
@@ -49,7 +49,12 @@ import Panel from "../components/Panel";
 
 export default {
   name: "Form",
-  components: { Panel }
+  components: { Panel },
+  methods: {
+    handleSubmit(e) {
+      e.preventDefault();
+    }
+  }
 };
 </script>
 
