@@ -1,4 +1,4 @@
-# hello-world
+# Vue js panel based navigation
 
 ## Project setup
 ```
